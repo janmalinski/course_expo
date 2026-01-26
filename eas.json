@@ -1,0 +1,37 @@
+{
+  "cli": {
+    "version": ">= 3.9.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "development"
+      },
+      "channel": "development"
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "preview"
+      },
+      "channel": "preview"
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production"
+    },
+    "simulator-ios": {
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      },
+      "channel": "simulator-ios"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
