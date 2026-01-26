@@ -18,6 +18,7 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
+
 # Metro
 .metro-health-check*
 
@@ -31,7 +32,7 @@ yarn-error.*
 *.pem
 
 # local env files
-.env*.local
+.env.*
 
 # typescript
 *.tsbuildinfo
@@ -41,3 +42,6 @@ app-example
 # generated native folders
 /ios
 /android
+
+# firebase login config
+/firebase
