@@ -25,6 +25,26 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Test deeplink on Expo Go
+
+```
+npx uri-scheme open exp://127.0.0.1:8081/--/deeplink/123 --ios
+```
+
+```
+npx uri-scheme open exp://127.0.0.1:8081/--/deeplink/123 --android
+```
+
+## Test on a development/production build
+
+```
+npx uri-scheme open firebaseapp://deeplink/123 --ios
+```
+
+```
+npx uri-scheme open firebaseapp://deeplink/123 --android
+```
+
 ## Get a fresh project
 
 When you're ready, run:
