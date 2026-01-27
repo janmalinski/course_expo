@@ -24,14 +24,20 @@
       "channel": "production"
     },
     "simulator-ios": {
-      "extends": "development",
+      "withoutCredentials": true,
       "ios": {
-        "simulator": true
+        "simulator": true,
+        "image": "latest"
       },
       "channel": "simulator-ios"
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./AndroidServiceAccount.json",
+        "track": "internal"
+      }
+    }
   }
 }
