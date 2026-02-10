@@ -30,6 +30,13 @@
         "image": "latest"
       },
       "channel": "simulator-ios"
+    },
+    "emulator-android": {
+      "withoutCredentials": true,
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      }
     }
   },
   "submit": {
