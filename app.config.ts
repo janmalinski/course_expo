@@ -33,7 +33,100 @@ const getEnviromentalValues = () => {
     }
 };
 
-const config: ExpoConfig = {
+// const config: ExpoConfig = {
+//   name: getEnviromentalValues().name,
+//   slug: "firebaseapp",
+//   version: "1.0.0",
+//   runtimeVersion: "1.0.0",
+//   orientation: "portrait",
+//   icon: "./assets/images/icon.png",
+//   scheme: "firebaseapp",
+//   userInterfaceStyle: "automatic",
+//   newArchEnabled: true,
+
+//   ios: {
+//     supportsTablet: true,
+//     bundleIdentifier: getEnviromentalValues().bundleIdentifier,
+//     infoPlist: {
+//       ITSAppUsesNonExemptEncryption: false,
+//       buildNumber: "1"
+//     },
+//     // TO SAMO CO infoPlist: {ITSAppUsesNonExemptEncryption: false,
+//     // config: {
+//     //   usesNonExemptEncryption: false
+//     // }
+//   },
+//   android: {
+//     adaptiveIcon: {
+//       backgroundColor: "#E6F4FE",
+//       foregroundImage: "./assets/images/android-icon-foreground.png",
+//       backgroundImage: "./assets/images/android-icon-background.png",
+//       monochromeImage: "./assets/images/android-icon-monochrome.png",
+//     },
+//     edgeToEdgeEnabled: true,
+//     predictiveBackGestureEnabled: false,
+//     package: getEnviromentalValues().package,
+//     versionCode: 1,
+//     // permissions: [
+//     //   "android.permission.BLUETOOTH",
+//     //   "android.permission.BLUETOOTH_ADMIN",
+//     //   "android.permission.BLUETOOTH_CONNECT",
+//     // ],
+//   },
+//   web: {
+//     output: "static",
+//     favicon: "./assets/images/favicon.png",
+//   },
+
+//   plugins: [
+//     "expo-router",
+//     [
+//       "expo-splash-screen",
+//       {
+//         image: "./assets/images/splash-icon.png",
+//         imageWidth: 200,
+//         resizeMode: "contain",
+//         backgroundColor: "#ffffff",
+//         dark: {
+//           backgroundColor: "#000000",
+//         },
+//       },
+//     ],
+//     // [
+//     //   "react-native-ble-manager",
+//     //   {
+//     //     isBleRequired: true,
+//     //     neverForLocation: true,
+//     //     companionDeviceEnabled: false,
+//     //     bluetoothAlwaysPermission:
+//     //       "Allow Firebaseapp to connect to bluetooth devices",
+//     //   },
+//     // ],
+//   ],
+
+//   experiments: {
+//     typedRoutes: true,
+//     reactCompiler: true,
+//   },
+
+//   extra: {
+//     router: {},
+//     eas: {
+//       "projectId": "0b277b1f-4a79-44e8-a4f8-bccf0b15d583"
+//     },
+//   },
+//   // runtimeVersion: {
+//   //   policy: "appVersion",
+//   // },
+
+//   updates: {
+//     url: "https://u.expo.dev/0b277b1f-4a79-44e8-a4f8-bccf0b15d583",
+//   },
+
+//   owner: "jan-malinski-uslugi-programistyczne-spolka-z-oo",
+// };
+
+export default {
   name: getEnviromentalValues().name,
   slug: "firebaseapp",
   version: "1.0.0",
@@ -43,8 +136,7 @@ const config: ExpoConfig = {
   scheme: "firebaseapp",
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
-
-  ios: {
+   ios: {
     supportsTablet: true,
     bundleIdentifier: getEnviromentalValues().bundleIdentifier,
     infoPlist: {
@@ -73,7 +165,7 @@ const config: ExpoConfig = {
     //   "android.permission.BLUETOOTH_CONNECT",
     // ],
   },
-  web: {
+    web: {
     output: "static",
     favicon: "./assets/images/favicon.png",
   },
@@ -103,34 +195,14 @@ const config: ExpoConfig = {
     //   },
     // ],
   ],
-
   experiments: {
     typedRoutes: true,
     reactCompiler: true,
   },
-
   extra: {
-    router: {},
     eas: {
       "projectId": "0b277b1f-4a79-44e8-a4f8-bccf0b15d583"
     },
-  },
-  // runtimeVersion: {
-  //   policy: "appVersion",
-  // },
-
-  updates: {
-    url: "https://u.expo.dev/0b277b1f-4a79-44e8-a4f8-bccf0b15d583",
-  },
-
-  owner: "jan-malinski-uslugi-programistyczne-spolka-z-oo",
-};
-
-export default ({ config }: {config: ExpoConfig}) => ({
-  ...config,
-  extra: {
-    ...config.extra,
-
     firebaseApiKey: process.env.FIREBASE_API_KEY,
     firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
     firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
@@ -139,4 +211,9 @@ export default ({ config }: {config: ExpoConfig}) => ({
     firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
     firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
   },
-});
+   updates: {
+    url: "https://u.expo.dev/0b277b1f-4a79-44e8-a4f8-bccf0b15d583",
+  },
+
+  owner: "jan-malinski-uslugi-programistyczne-spolka-z-oo",
+};
