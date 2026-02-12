@@ -141,7 +141,7 @@ export default {
     bundleIdentifier: getEnviromentalValues().bundleIdentifier,
     infoPlist: {
       ITSAppUsesNonExemptEncryption: false,
-      buildNumber: "1"
+      buildNumber: "7"
     },
     // TO SAMO CO infoPlist: {ITSAppUsesNonExemptEncryption: false,
     // config: {
